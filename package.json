@@ -8,9 +8,7 @@
     "build:test": "vite build --mode testing",
     "build:prod": "vite build --mode production",
     "serve": "vite preview",
-    "lint:style": "stylelint --fix src/**/*.{vue,htm,html,css,sss,less,scss}",
-    "commit": "git-cz",
-    "postinstall": "husky install"
+    "lint:style": "stylelint --fix src/**/*.{vue,htm,html,css,sss,less,scss}"
   },
   "dependencies": {
     "@vueuse/core": "^5.0.2",
@@ -68,18 +66,5 @@
     "vite": "^2.3.7",
     "vite-plugin-compression": "^0.2.5",
     "vue-tsc": "^0.0.24"
-  },
-  "lint-staged": {
-    "src/**/*.{js,ts,tsx,vue}": [
-      "eslint --fix"
-    ],
-    "src/**/*.{vue,htm,html,css,sss,less,scss}": [
-      "stylelint --fix"
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }

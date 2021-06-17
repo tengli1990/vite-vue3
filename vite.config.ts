@@ -34,6 +34,8 @@ export default defineConfig({
           if (id.includes('node_modules')) {
             if (id.includes('ant-design-vue')) {
               return 'antDesignVue'
+            } else if (id.includes('moment')) {
+              return 'moment'
             } else {
               return 'lib'
             }

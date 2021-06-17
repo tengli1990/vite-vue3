@@ -84,8 +84,7 @@
         }
       }
     },
-    methods: {
-    }
+    methods: {}
   })
 </script>
 
@@ -97,7 +96,7 @@
       padding: 0;
 
       &.no-footer {
-        /deep/ .ant-page-header-footer {
+        &:deep(.ant-page-header-footer) {
           display: none;
         }
       }
