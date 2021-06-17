@@ -1,0 +1,83 @@
+.basic-layout {
+  height: 100vh;
+
+  &--sider {
+    position: relative;
+  }
+
+  &--header {
+    background: @component-background;
+    padding: 0;
+    box-shadow: 0 1px 4px rgb(0 21 41 / 8%);
+    z-index: 1;
+
+    .collapsed-btn {
+      display: inline-block;
+      font-size: 20px;
+      padding: 0 20px;
+
+      > *:hover {
+        color: @primary-color;
+      }
+    }
+
+    .right-box {
+      float: right;
+      display: flex;
+      padding: 0 20px;
+
+      .right-item {
+        display: flex;
+        padding: 0 8px;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+          background: @component-background;
+        }
+
+        &--icon {
+          font-size: 18px;
+        }
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &--content {
+    position: relative;
+    height: 100%;
+    overflow: auto;
+    // padding: 24px 16px;
+    > :first-child.fade-slide-leave-active {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+    }
+  }
+
+  &--footer {
+    padding: 0;
+  }
+}
+
+// menu
+.sider-menu {
+  position: relative;
+  height: calc(100% - 64px);
+  overflow: auto;
+}
+
+// avatar
+.as-avatar {
+  display: inline-block;
+
+  .ant-dropdown-link {
+    display: block;
+    min-height: 64px;
+    cursor: pointer;
+  }
+}

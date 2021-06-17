@@ -1,0 +1,112 @@
+html,
+body,
+#app,
+#root {
+  height: 100%;
+}
+
+.ant-layout.layout-basic {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+div,
+p,
+ul,
+ol,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+section,
+header,
+footer,
+article,
+aside {
+  display: block;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@marginList: 8, 16, 24;
+.ml-loop(@list,@i:1,@val:extract(@list,@i)) when (length(@list)>=@i) {
+  .m-@{val} {
+    margin: @val*1px !important;
+  }
+  .mx-@{val} {
+    margin-left: @val*1px !important;
+    margin-right: @val*1px !important;
+  }
+  .my-@{val} {
+    margin-top: @val*1px !important;
+    margin-bottom: @val*1px !important;
+  }
+  .mt-@{val} {
+    margin-top: @val*1px !important;
+  }
+  .mr-@{val} {
+    margin-right: @val*1px !important;
+  }
+  .mb-@{val} {
+    margin-bottom: @val*1px !important;
+  }
+  .ml-@{val} {
+    margin-left: @val*1px !important;
+  }
+
+  .p-@{val} {
+    padding: @val*1px !important;
+  }
+  .px-@{val} {
+    padding-left: @val*1px !important;
+    padding-right: @val*1px !important;
+  }
+  .py-@{val} {
+    padding-top: @val*1px !important;
+    padding-bottom: @val*1px !important;
+  }
+
+  .pt-@{val} {
+    padding-top: @val*1px !important;
+  }
+  .pr-@{val} {
+    padding-right: @val*1px !important;
+  }
+  .pb-@{val} {
+    padding-bottom: @val*1px !important;
+  }
+  .pl-@{val} {
+    padding-left: @val*1px !important;
+  }
+
+  .ml-loop(@list, (@i+1));
+}
+.ml-loop(@marginList);
+
+@clampList: 1, 2, 3, 4;
+.clamp-loop(@list,@i:1,@val:extract(@list,@i)) when (length(@list)>=@i) {
+  .clamp-@{val} {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: @val;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .clamp-loop(@list, (@i+1));
+}
+.clamp-loop(@clampList);

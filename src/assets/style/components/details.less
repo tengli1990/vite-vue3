@@ -1,0 +1,44 @@
+.m-details {
+  padding: 12px 24px 12px 8px;
+
+  &--title {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &--content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .item {
+      width: 100%;
+      display: flex;
+      font-size: 14px;
+      padding: 4px 0;
+
+      .label {
+        white-space: nowrap;
+        padding-left: 16px;
+        min-width: 90px;
+        text-align: right;
+      }
+
+      .value {
+        flex: 1;
+      }
+    }
+
+    &.column-2 .item {
+      width: 50%;
+    }
+
+    &.column-3 .item {
+      width: 33.3333%;
+    }
+
+    &.column-4 .item {
+      width: 25%;
+    }
+  }
+}
