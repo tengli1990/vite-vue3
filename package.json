@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": " vite",
+    "serve": " vite",
     "build": "vite build",
     "build:test": "vite build --mode testing",
     "build:prod": "vite build --mode production",
-    "serve": "vite preview",
+    "preview": "vite preview --port=8000",
     "lint:style": "stylelint --fix src/**/*.{vue,htm,html,css,sss,less,scss}"
   },
   "dependencies": {

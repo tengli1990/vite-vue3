@@ -1,25 +1,22 @@
 <template>
   <div class="sample-index">
-    <MPageHeader title="基础布局">
-
-    </MPageHeader>
+    <MPageHeader title="基础布局"></MPageHeader>
     <MPageContainer>
       <div>1</div>
-       {{$moment()}}
-       <div class="mt-24">2</div>
+      {{ $moment() }}
+      <div class="mt-24">2</div>
     </MPageContainer>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, getCurrentInstance } from 'vue'
+  import { defineComponent, getCurrentInstance } from 'vue'
 
   export default defineComponent({
     setup () {
-    const { proxy }: any = getCurrentInstance()
-    proxy.$testFn(1)
-      return {
-      }
+      const { proxy }: any = getCurrentInstance()
+      proxy.$testFn(1)
+      return {}
     },
     data () {
       return {
@@ -31,5 +28,3 @@ import { defineComponent, getCurrentInstance } from 'vue'
     }
   })
 </script>
-
-<style scoped></style>

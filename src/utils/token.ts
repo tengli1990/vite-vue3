@@ -2,7 +2,7 @@ import Cookies from 'js-cookie'
 import setting from '../config/settings'
 import { UserInfoState } from '../types/vuex'
 
-const TOKEN_KEY = setting.clientId + '-token'
+const TOKEN_KEY = setting.clientId + '_token'
 
 // 获取存储在本地的 user 信息
 export function getUser (): UserInfoState | null {
